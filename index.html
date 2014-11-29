@@ -3,17 +3,28 @@
 	<head>
 		<title>Head First Lounge</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="loung.css">
-		<script src="lounge.js"></script>
 	</head>
 	<body>
-		<h1>Welcome to Head First Lounge</h1>
-		<p>
-			<img src="1.jpg" alt="Drinks">
-			</p>
-		<p>
-		Join us any evening for refreshing <a href="elixirs.html">elixirs</a>, conversation and maybe a game or two of Tap Tap Revolution.
-		Wireless access is always provided; BYOWS (Bring Your Own Web Server).
-		</p>		
+		<script>
+		var drink="Energy Drink";
+		var lyrics="";
+		var cans=99;
+
+		while (cans > 0){
+			lyrics = lyrics + cans + " cans of " + drink + " on the wall <br>";
+			lyrics = lyrics + cans + " cans of " + drink + "<br>";
+			lyrics = lyrics + " Take one down, pass it around<br>";
+
+			if (cans > 1){
+				lyrics = lyrics + (cans -1) + " cans of " + drink + "on the wall<br>";
+				}
+
+			else {
+				lyrics = lyrics + " No more cans of " + drink + " on the wall<br>";
+				}
+			cans = cans - 1;
+			}
+		document.write(lyrics);
+	</script>
 	</body>
 </html>
